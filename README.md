@@ -1,6 +1,6 @@
 # cpp-spreadsheet
 It's a diploma project written on C++ during Yandex Praktikum course
-Description
+# Description
 A back-end realization of spreadsheet. Supports basic arithmetic operations and references (links) to other cells
 
 Example:
@@ -18,7 +18,7 @@ Realized exceptions support:
 #DIV0! - if formula contains division by zero
 #VALUE! - if an operand contains a text value instead of number
 #REF! - if a referenced cell position is out of sheet possible size
-Note
+# Note
 Link cyclic dependency check was realized. In case of such situation:
 
 sheet->SetCell("A1"_pos, "=A2");
@@ -27,10 +27,10 @@ a CircularDependencyException will be thrown.
 
 Realized a mechanism of fast items announcing in case of cell value was changed.
 
-Used language features
+# Used language features
 OOP, polymorphism, templates, lyambda functions, std algorithms, abstract syntax tree (AST), patterns.
 
-Build
+# Build
 ANTLR generator is used. Grammar rules are located in Formula.g4 file.
 
 To generate executive files run command:
